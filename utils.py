@@ -32,7 +32,7 @@ def download(link, out, headers=None):
         print(f"{out} already exists skipping download")
         return
 
-    # https://www.slingacademy.com/article/python-requests-module-how-to-download-files-from-urls/#Streaming_Large_Files
+    # https://www.slingacademy.com/article/python-requests-module-how-to-download-files-from-urls/#Streaming_Large
     with requests.get(link, stream=True, headers=headers, timeout=30) as r:
         r.raise_for_status()
         with open(out, "wb") as f:
@@ -55,8 +55,8 @@ def run_command(command: list[str]):
 def sign_artifact(path: str) -> str | None:
     """Create a detached, ASCII-armored GPG signature for a release artifact.
 
-    Mirrors how Morphe/Piko ship a ``<bundle>.mpp.asc`` next to the patch bundle.
-    Returns the ``.asc`` path, or ``None`` when signing is unavailable (no gpg,
+    Mirrors how Morphe/Piko ship a `<bundle>.mpp.asc` next to the patch bundle.
+    Returns the `.asc` path, or `None` when signing is unavailable (no gpg,
     no key, or signing fails). Signing failures are non-fatal so the unsigned
     bundle still ships.
     """
@@ -65,37 +65,39 @@ def sign_artifact(path: str) -> str | None:
         print("gpg not found; skipping detached signature")
         return None
 
-    command = [
-        "gpg", "--batch", "--yes", "--armor", "--detach-sign",
-        "--output", asc_path, path,
-    ]
-    passphrase = os.environ.get("GPG_PASSPHRASE")
-    if passphrase:
-        command = [
-            "gpg", "--batch", "--yes", "--armor", "--detach-sign",
-            "--pinentry-mode", "loopback",
-            "--passphrase", passphrase,
-            "--output", asc_path, path,
-        ]
+    gpg_passphrase = os.environ.get("GPG_PASSPHRASE")
+    sign_command = ["gpg", "--batch", "--yes", "--detach-sign", "--armor"]
+    if gpg_passphrase:
+        sign_command.extend(
+            ["--pinentry-mode", "loopback", "--passphrase", gpg_passphrase]
+        )
+    sign_command.append(path)
 
     try:
-        subprocess.run(command, check=True, capture_output=True)
-    except subprocess.CalledProcessError as error:
-        stderr = error.stderr.decode("utf-8", "replace").strip()
-        print(f"Warning: GPG signing failed, releasing unsigned: {stderr}")
+        subprocess.run(
+            sign_command,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    except subprocess.CalledProcessError as exc:
+        print(f"gpg detached signature failed: {exc.stderr}")
         return None
+
     return asc_path
 
 
-def publish_release(tag: str, files: list[str], message: str, title = ""):
-    key = os.environ.get("GITHUB_TOKEN")
-    if key is None:
-        raise Exception("GITHUB_TOKEN is not set")
-
-    command = ["gh", "release", "create", "--latest", tag, "--notes", message, "--title", title]
-
-    if len(files) == 0:
-        raise Exception("Files should have atleast one item")
+def publish_release(tag: str, files: list[str], body: str, title: str):
+    command = [
+        "gh",
+        "release",
+        "create",
+        tag,
+        "--title",
+        title,
+        "--notes",
+        body,
+    ]
 
     for file in files:
         command.append(file)

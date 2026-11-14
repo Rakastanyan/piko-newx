@@ -6,6 +6,8 @@ import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 
+from localize import apply_chinese_localization
+
 PIKO_REPO = "crimera/piko"
 PIKO_REPOSITORY = f"https://github.com/{PIKO_REPO}.git"
 PIKO_BRANCH = "x-lite"
@@ -31,25 +33,26 @@ def get_supported_versions(constants: str) -> frozenset[str]:
 
 
 def pre_build_cleanup(piko_directory: Path) -> None:
-    """Remove Instagram, Twitter, and legacy patches/extensions before building."""
-    # Remove non-NewX patch source packages
+    """Remove Instagram, Twitter, and legacy/cross-app patches/extensions before building."""
     for path in [
         piko_directory / "patches/src/main/kotlin/app/crimera/patches/instagram",
         piko_directory / "patches/src/main/kotlin/app/crimera/patches/twitter",
+        piko_directory / "patches/src/main/kotlin/app/crimera/patches/revanced",
         piko_directory / "patches/src/main/kotlin/app/revanced",
+        piko_directory / "patches/src/main/kotlin/app/morphe/patches/all",
     ]:
         if path.exists():
             shutil.rmtree(path)
 
-    # Remove non-NewX extension modules
     for path in [
         piko_directory / "extensions/instagram",
         piko_directory / "extensions/twitter",
+        piko_directory / "extensions/all",
     ]:
         if path.exists():
             shutil.rmtree(path)
 
-    # Keep twitter/bringbacktwitter assets for Bring back twitter patch
+    # Keep twitter/bringbacktwitter assets for RestoreTwitterBrandingPatch
     twitter_res = piko_directory / "patches/src/main/resources/twitter"
     if twitter_res.exists():
         for item in twitter_res.iterdir():
@@ -84,7 +87,9 @@ def set_project_version(piko_directory: Path, version: str) -> None:
 
 
 def build_piko_patches(
-    patch_version: str, output: str | None = None
+    patch_version: str,
+    output: str | None = None,
+    patch_locale: str | None = None,
 ) -> PikoBuild:
     if output is None:
         output = f"bins/patches-{patch_version}.mpp"
@@ -116,6 +121,7 @@ def build_piko_patches(
         )
 
         pre_build_cleanup(piko_directory)
+        apply_chinese_localization(piko_directory, patch_locale=patch_locale)
         set_project_version(piko_directory, patch_version)
 
         subprocess.run(
@@ -142,4 +148,4 @@ def build_piko_patches(
             text=True,
         )
 
-    return PikoBuild(commit=commit.stdout.strip(), supported_versions=supported_versions)
+        return PikoBuild(commit=commit.stdout.strip(), supported_versions=supported_versions)

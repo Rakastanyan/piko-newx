@@ -26,5 +26,3 @@ def get_xlite_patches(cli: str, patches: str) -> list[str]:
     if not includes:
         raise RuntimeError("Morphe returned no NewX patches")
     return includes
-
-

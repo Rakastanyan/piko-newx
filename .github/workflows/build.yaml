@@ -35,7 +35,7 @@ jobs:
           enable-cache: true
 
       - name: Install dependencies
-        run: uv sync --frozen
+        run: uv sync
 
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v7
@@ -48,21 +48,110 @@ jobs:
         id: release_version
         env:
           FORCE_PATCH: "true"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UPSTREAM_REPO: "crimera/piko-newx"
         run: |
-          set -euo pipefail
-          chmod +x .github/scripts/generate-changelog.sh
-          .github/scripts/generate-changelog.sh \
-            2>/tmp/release-version-output \
-            >/tmp/release-changelog-output
+          python3 - <<'PY'
+          import json, os, re, subprocess, urllib.request
+          from pathlib import Path
 
-          cat /tmp/release-version-output
-          NEW_VERSION=$(grep -E '^v[0-9]+\.[0-9]+\.[0-9]+' /tmp/release-version-output | tail -n1)
-          SEMANTIC_BUMP=$(grep '^semantic_bump=' /tmp/release-version-output | tail -n1 | cut -d= -f2)
+          def run(cmd):
+              return subprocess.run(cmd, capture_output=True, text=True)
 
-          test -n "$NEW_VERSION"
-          test -n "$SEMANTIC_BUMP"
-          echo "new_version=$NEW_VERSION" >> "$GITHUB_OUTPUT"
-          echo "semantic_bump=$SEMANTIC_BUMP" >> "$GITHUB_OUTPUT"
+          def parse_ver(tag: str) -> tuple[int, int, int]:
+              clean = tag.strip().lstrip("v")
+              m = re.match(r"^(\d+)\.(\d+)\.(\d+)$", clean)
+              if not m:
+                  return (0, 0, 0)
+              return (int(m.group(1)), int(m.group(2)), int(m.group(3)))
+
+          def fetch_upstream_latest_tag(upstream_repo: str) -> str:
+              url = f"https://api.github.com/repos/{upstream_repo}/releases/latest"
+              headers = {"Accept": "application/vnd.github+json", "User-Agent": "piko-newx-sync"}
+              token = os.environ.get("GITHUB_TOKEN")
+              if token:
+                  headers["Authorization"] = f"Bearer {token}"
+              try:
+                  req = urllib.request.Request(url, headers=headers)
+                  with urllib.request.urlopen(req, timeout=15) as resp:
+                      data = json.loads(resp.read().decode("utf-8"))
+                      tag = data.get("tag_name", "")
+                      if re.match(r"^v?\d+\.\d+\.\d+$", tag):
+                          return tag if tag.startswith("v") else f"v{tag}"
+              except Exception as exc:
+                  print(f"Warning: failed to fetch upstream release ({exc})")
+              return ""
+
+          upstream_repo = os.environ.get("UPSTREAM_REPO", "crimera/piko-newx")
+          upstream_tag = fetch_upstream_latest_tag(upstream_repo)
+
+          local_tag = ""
+          res = run(["git", "describe", "--tags", "--abbrev=0"])
+          if res.returncode == 0:
+              local_tag = res.stdout.strip()
+          if not local_tag and Path("patches-bundle.json").is_file():
+              try:
+                  data = json.loads(Path("patches-bundle.json").read_text(encoding="utf-8"))
+                  local_tag = data.get("version", "")
+              except Exception:
+                  pass
+          if not re.match(r"^v?\d+\.\d+\.\d+$", local_tag):
+              local_tag = "v3.75.0"
+          if not local_tag.startswith("v"):
+              local_tag = f"v{local_tag}"
+
+          existing_tags = set(run(["git", "tag", "--list"]).stdout.splitlines())
+
+          # Prefer upstream latest version if it hasn't been released in this fork yet
+          if upstream_tag and parse_ver(upstream_tag) >= parse_ver(local_tag) and upstream_tag not in existing_tags:
+              new_version = upstream_tag
+              prev_tag = local_tag
+              semantic_bump = "true"
+          else:
+              prev_tag = upstream_tag if (upstream_tag and parse_ver(upstream_tag) > parse_ver(local_tag)) else local_tag
+              major, minor, patch = parse_ver(prev_tag)
+              has_tag = run(["git", "rev-parse", prev_tag]).returncode == 0
+              log_range = f"{prev_tag}..HEAD" if has_tag else "HEAD"
+              log_res = run(["git", "log", log_range, "--pretty=format:* %s (%h) by @%an", "--no-merges"])
+              commits = [line for line in log_res.stdout.splitlines() if "chore(release)" not in line]
+
+              semantic_bump = "false"
+              if any(re.match(r"^\* feat(\([^)]+\))?!?:", c) for c in commits):
+                  minor += 1
+                  patch = 0
+                  semantic_bump = "true"
+              elif any(re.match(r"^\* (fix|perf|refactor)(\([^)]+\))?:", c) for c in commits):
+                  patch += 1
+                  semantic_bump = "true"
+              elif os.environ.get("FORCE_PATCH", "false").lower() == "true":
+                  patch += 1
+                  semantic_bump = "true"
+              new_version = f"v{major}.{minor}.{patch}"
+              while new_version in existing_tags:
+                  patch += 1
+                  new_version = f"v{major}.{minor}.{patch}"
+
+          has_prev = run(["git", "rev-parse", prev_tag]).returncode == 0
+          log_range = f"{prev_tag}..HEAD" if has_prev else "HEAD"
+          log_res = run(["git", "log", log_range, "--pretty=format:* %s (%h) by @%an", "--no-merges"])
+          commits = [line for line in log_res.stdout.splitlines() if "chore(release)" not in line]
+
+          repo = os.environ.get("GITHUB_REPOSITORY", "crimera/piko-newx")
+          changelog_lines = [
+              "## What's Changed",
+              "",
+              *(commits if commits else [f"* Sync with upstream {upstream_repo} ({new_version})."]),
+              "",
+              f"**Full Changelog**: https://github.com/{repo}/compare/{prev_tag}...{new_version}",
+          ]
+          Path("/tmp/release-changelog-output").write_text("\n".join(changelog_lines) + "\n", encoding="utf-8")
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"new_version={new_version}\n")
+              f.write(f"semantic_bump={semantic_bump}\n")
+
+          print(f"upstream_tag={upstream_tag}, local_tag={local_tag} -> new_version={new_version}, semantic_bump={semantic_bump}")
+          PY
 
       - name: Build and publish release
         env:

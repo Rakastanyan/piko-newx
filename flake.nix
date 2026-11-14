@@ -14,7 +14,7 @@
       {
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
-            jre          # Java Runtime Environment (OpenJDK)
+            jre        # Java Runtime Environment (OpenJDK)
           ];
 
           shellHook = ''

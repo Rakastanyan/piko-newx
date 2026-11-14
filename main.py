@@ -11,7 +11,6 @@ from constants import REPO
 from download_bins import download_morphe_cli
 from utils import publish_release, sign_artifact
 
-
 CHANGELOG_FILE = "CHANGELOG.md"
 CHANGELOG_APP_NAME = "Twitter"
 PATCHES_BUNDLE_FILE = "patches-bundle.json"
@@ -123,7 +122,7 @@ def read_generated_changelog(path: str | None) -> str:
         return ""
 
     changelog = Path(path).read_text(encoding="utf-8").strip()
-    if changelog == "*No notable changes in this release.*":
+    if changelog == "**No notable changes in this release.**":
         return ""
     return changelog
 
@@ -281,12 +280,16 @@ def main(
     release_tag: str,
     semantic_bump: bool,
     generated_changelog: str = "",
+    patch_locale: str = "bilingual",
 ) -> None:
     patch_version = validate_release_tag(release_tag)
 
-    # Build the same Piko revision that will be used for patching first.  Its
+    # Build the same Piko revision that will be used for patching first. Its
     # compatibility targets determine which X app version is represented.
-    piko_build = build_piko_patches(patch_version=patch_version)
+    piko_build = build_piko_patches(
+        patch_version=patch_version,
+        patch_locale=patch_locale,
+    )
     app_version = get_latest_version(piko_build.supported_versions)
     if app_version is None:
         raise Exception("No X version is supported by the Piko x-lite patches")
@@ -314,20 +317,14 @@ def manual(
     release_tag: str,
     semantic_bump: bool,
     generated_changelog: str = "",
+    patch_locale: str = "bilingual",
 ) -> None:
     patch_version = validate_release_tag(release_tag)
-    piko_build = build_piko_patches(patch_version=patch_version)
-    if version not in piko_build.supported_versions:
-        supported = ", ".join(sorted(piko_build.supported_versions))
-        raise ValueError(f"{version} is not supported by Piko x-lite (supported: {supported})")
-
-    previous_release = github.get_last_build_version(REPO)
-    metadata = read_release_metadata()
-    if not should_publish(
-        version, piko_build, previous_release, semantic_bump, metadata
-    ):
-        print("No semantic or release-content changes found")
-        return
+    piko_build = build_piko_patches(
+        patch_version=patch_version,
+        patch_locale=patch_locale,
+    )
+    previous_release = github.get_release_by_tag(REPO, release_tag)
 
     process(
         version,
@@ -339,18 +336,22 @@ def manual(
 
 
 if __name__ == "__main__":
-    parser = ArgumentParser(description="Piko APK")
-    parser.add_argument("--m", action="store", dest="mode", default=0)
-    parser.add_argument("--v", action="store", dest="version", default=0)
+    parser = ArgumentParser()
+    parser.add_argument("--v", "--version", dest="version", default="")
     parser.add_argument("--release-tag", required=True)
-    parser.add_argument(
-        "--semantic-bump", choices=("true", "false"), default="false"
-    )
+    parser.add_argument("--semantic-bump", required=True)
     parser.add_argument("--changelog-file", default=None)
+    parser.add_argument(
+        "--patch-locale",
+        default="bilingual",
+        choices=["bilingual", "zh-rCN", "zh-rTW", "en"],
+        help="Locale mode for patch options and descriptions (default: bilingual)",
+    )
+    parser.add_argument("--m", "--mode", dest="mode", type=int, default=0)
     args = parser.parse_args()
 
+    semantic_bump = args.semantic_bump.lower() == "true"
     generated_changelog = read_generated_changelog(args.changelog_file)
-    semantic_bump = args.semantic_bump == "true"
 
     if args.mode:
         if not args.version:
@@ -360,6 +361,12 @@ if __name__ == "__main__":
             args.release_tag,
             semantic_bump,
             generated_changelog,
+            patch_locale=args.patch_locale,
         )
     else:
-        main(args.release_tag, semantic_bump, generated_changelog)
+        main(
+            args.release_tag,
+            semantic_bump,
+            generated_changelog,
+            patch_locale=args.patch_locale,
+        )

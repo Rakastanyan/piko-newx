@@ -1,0 +1,286 @@
+{
+  "patches": {
+    "NewX: Remove ads": {
+      "zh-rCN": {
+        "name": "NewX: 移除广告",
+        "description": "从 NewX 时间线中过滤并隐藏推广帖子及广告模块。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 移除廣告",
+        "description": "從 NewX 動態時報中過濾並隱藏推廣貼文與廣告模組。"
+      }
+    },
+    "NewX: Hide premium upsell": {
+      "zh-rCN": {
+        "name": "NewX: 隐藏 Premium 会员推广",
+        "description": "隐藏应用内的 X Premium 订阅推广与升级提示。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 隱藏 Premium 會員推廣",
+        "description": "隱藏應用程式內的 X Premium 訂閱推廣與升級提示。"
+      }
+    },
+    "NewX: Unlock downloads": {
+      "zh-rCN": {
+        "name": "NewX: 解锁媒体下载",
+        "description": "为帖子和视频时间线启用媒体与视频下载按钮。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 解鎖媒體下載",
+        "description": "為貼文和影片動態時報啟用媒體與影片下載按鈕。"
+      }
+    },
+    "NewX: Translator": {
+      "zh-rCN": {
+        "name": "NewX: 翻译增强",
+        "description": "提供应用内翻译选项并支持自定义翻译引擎服务。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 翻譯增強",
+        "description": "提供應用程式內翻譯選項並支援自訂翻譯引擎服務。"
+      }
+    },
+    "NewX: Hide spaces bar": {
+      "zh-rCN": {
+        "name": "NewX: 隐藏 Spaces 空间栏",
+        "description": "隐藏时间线顶部的实时音频空间（Spaces）栏。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 隱藏 Spaces 空間列",
+        "description": "隱藏動態時報頂部的即時音訊空間（Spaces）列。"
+      }
+    },
+    "NewX: Hide new post pill": {
+      "zh-rCN": {
+        "name": "NewX: 隐藏新帖子悬浮提示条",
+        "description": "隐藏时间线顶部的新推送帖子悬浮提示气泡。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 隱藏新貼文懸浮提示膠囊",
+        "description": "隱藏動態時報頂部的新貼文懸浮提示按鈕。"
+      }
+    },
+    "NewX: Hide who to follow": {
+      "zh-rCN": {
+        "name": "NewX: 隐藏推荐关注",
+        "description": "从时间线中隐藏推荐关注账号模块。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 隱藏推薦跟隨",
+        "description": "從動態時報中隱藏推薦跟隨帳號模組。"
+      }
+    },
+    "NewX: Show poll results": {
+      "zh-rCN": {
+        "name": "NewX: 直接查看投票结果",
+        "description": "无需参与投票即可直接查看投票结果。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 直接查看投票結果",
+        "description": "無需參與投票即可直接查看投票結果。"
+      }
+    },
+    "NewX: Hide discover more": {
+      "zh-rCN": {
+        "name": "NewX: 隐藏发现更多",
+        "description": "移除帖子详情与回复串底部的“发现更多”推荐内容。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 隱藏探索更多",
+        "description": "移除貼文詳情與回覆串底部的「探索更多」推薦內容。"
+      }
+    },
+    "NewX: Hide post dividers": {
+      "zh-rCN": {
+        "name": "NewX: 隐藏帖子分隔线",
+        "description": "隐藏时间线中帖子之间的水平分隔线。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 隱藏貼文分隔線",
+        "description": "隱藏動態時報中貼文之間的水平分隔線。"
+      }
+    },
+    "NewX: For You topic filter": {
+      "zh-rCN": {
+        "name": "NewX: 为你推荐话题过滤",
+        "description": "过滤“为你推荐”时间线中的推广话题与推荐模块。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 為你推薦主題過濾",
+        "description": "過濾「為你推薦」動態時報中的推廣主題與推薦模組。"
+      }
+    },
+    "NewX: Hide new post button": {
+      "zh-rCN": {
+        "name": "NewX: 隐藏发帖悬浮按钮",
+        "description": "隐藏主界面右下角的发布新帖子悬浮按钮（FAB）。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 隱藏發佈貼文懸浮按鈕",
+        "description": "隱藏主畫面右下角的發佈新貼文懸浮按鈕（FAB）。"
+      }
+    },
+    "NewX: Show sensitive media": {
+      "zh-rCN": {
+        "name": "NewX: 自动显示敏感媒体",
+        "description": "绕过敏感媒体内容警告并自动显示帖子图片与视频。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 自動顯示敏感媒體",
+        "description": "略過敏感媒體內容警告並自動顯示貼文圖片與影片。"
+      }
+    },
+    "NewX: Timeline filter": {
+      "zh-rCN": {
+        "name": "NewX: 时间线过滤",
+        "description": "提供时间线内容过滤、位置恢复及刷新控制功能。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 動態時報過濾",
+        "description": "提供動態時報內容過濾、位置恢復及重新整理控制功能。"
+      }
+    },
+    "NewX: Customize drawer": {
+      "zh-rCN": {
+        "name": "NewX: 自定义侧边栏与导航栏",
+        "description": "自定义侧边抽屉菜单项与底部导航栏按钮。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 自訂側邊欄與導覽列",
+        "description": "自訂側邊抽屜選單項目與底部導覽列按鈕。"
+      }
+    },
+    "NewX: Clone": {
+      "zh-rCN": {
+        "name": "NewX: 应用分身（共存版）",
+        "description": "修改应用包名与应用名称，以便与官方原版或其他修改版 X 共存安装。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 應用程式分身（雙開共存）",
+        "description": "修改應用程式套件名稱與顯示名稱，以便與官方原版或其他修改版 X 共存安裝。"
+      }
+    },
+    "NewX: Clone app": {
+      "zh-rCN": {
+        "name": "NewX: 应用分身（共存版）",
+        "description": "修改应用包名与应用名称，以便与官方原版或其他修改版 X 共存安装。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 應用程式分身（雙開共存）",
+        "description": "修改應用程式套件名稱與顯示名稱，以便與官方原版或其他修改版 X 共存安裝。"
+      }
+    },
+    "NewX: Disable blur": {
+      "zh-rCN": {
+        "name": "NewX: 禁用模糊效果",
+        "description": "禁用 NewX Compose 界面与敏感媒体上的模糊遮罩效果。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 停用模糊效果",
+        "description": "停用 NewX Compose 介面與敏感媒體上的模糊遮罩效果。"
+      }
+    },
+    "NewX: Custom font": {
+      "zh-rCN": {
+        "name": "NewX: 自定义字体",
+        "description": "支持自定义应用字体与 Emoji 表情字体样式。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 自訂字型",
+        "description": "支援自訂應用程式字型與 Emoji 表情符號字型樣式。"
+      }
+    },
+    "NewX: Crash logs": {
+      "zh-rCN": {
+        "name": "NewX: 崩溃与调试日志",
+        "description": "启用应用崩溃日志记录与诊断调试工具。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 當機與偵錯日誌",
+        "description": "啟用應用程式當機日誌記錄與診斷偵錯工具。"
+      }
+    },
+    "NewX: Extensions": {
+      "zh-rCN": {
+        "name": "NewX: 扩展核心支持",
+        "description": "注入 Piko NewX 扩展运行时核心模块。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 擴充核心支援",
+        "description": "注入 Piko NewX 擴充執行階段核心模組。"
+      }
+    },
+    "NewX: Settings": {
+      "zh-rCN": {
+        "name": "NewX: Piko 设置菜单",
+        "description": "在 NewX 设置页面中添加 Piko 专属设置入口。"
+      },
+      "zh-rTW": {
+        "name": "NewX: Piko 設定選單",
+        "description": "在 NewX 設定頁面中新增 Piko 專屬設定入口。"
+      }
+    },
+    "NewX: Bring back twitter": {
+      "zh-rCN": {
+        "name": "NewX: 恢复 Twitter 经典蓝鸟图标与名称",
+        "description": "将应用桌面图标与名称从 X 恢复为经典的 Twitter 蓝鸟样式。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 恢復 Twitter 經典藍鳥圖示與名稱",
+        "description": "將應用程式桌面圖示與名稱從 X 恢復為經典的 Twitter 藍鳥樣式。"
+      }
+    },
+    "NewX: Restore Twitter branding": {
+      "zh-rCN": {
+        "name": "NewX: 恢复 Twitter 经典蓝鸟图标与品牌",
+        "description": "将应用桌面图标、启动画面与品牌名称从 X 恢复为经典的 Twitter 蓝鸟样式。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 恢復 Twitter 經典藍鳥圖示與品牌",
+        "description": "將應用程式桌面圖示、啟動畫面與品牌名稱從 X 恢復為經典的 Twitter 藍鳥樣式。"
+      }
+    }
+  },
+  "options": {
+    "Package name": {
+      "zh-rCN": {
+        "title": "应用包名",
+        "description": "为修补后的应用指定新的 Android 包名（Package Name）。"
+      },
+      "zh-rTW": {
+        "title": "套件名稱",
+        "description": "為修補後的應用程式指定新的 Android 套件名稱（Package Name）。"
+      }
+    },
+    "App name": {
+      "zh-rCN": {
+        "title": "应用名称",
+        "description": "为修补后的应用指定新的显示名称；输入「X」则跳过修改名称。"
+      },
+      "zh-rTW": {
+        "title": "應用程式名稱",
+        "description": "為修補後的應用程式指定新的顯示名稱；輸入「X」則略過修改名稱。"
+      }
+    },
+    "Restore Twitter icon": {
+      "zh-rCN": {
+        "title": "恢复经典 Twitter 蓝鸟图标",
+        "description": "将应用桌面启动图标替换为经典的蓝鸟图标。"
+      },
+      "zh-rTW": {
+        "title": "恢復經典 Twitter 藍鳥圖示",
+        "description": "將應用程式桌面啟動圖示替換為經典的藍鳥圖示。"
+      }
+    },
+    "Restore Twitter name": {
+      "zh-rCN": {
+        "title": "恢复应用名称为 Twitter",
+        "description": "将应用在桌面上显示的名称修改为 Twitter。"
+      },
+      "zh-rTW": {
+        "title": "恢復應用程式名稱為 Twitter",
+        "description": "將應用程式在桌面上顯示的名稱修改為 Twitter。"
+      }
+    }
+  }
+}
