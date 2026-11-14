@@ -1,3 +1,326 @@
+## [3.75.0](https://github.com/Rakastanyan/piko-newx/releases/tag/v3.75.0) (2026-11-14)
+
+## What's Changed
+
+* 增加中文翻译 (d5d038c) by @Rakastanyan
+* chore: update release metadata for v3.75.0 [skip ci] (93ff003) by @github-actions[bot]
+* chore: update release metadata for v3.74.0 [skip ci] (4ea2455) by @github-actions[bot]
+* chore: update release metadata for v3.73.0 [skip ci] (951d614) by @github-actions[bot]
+* chore: update release metadata for v3.72.3 [skip ci] (8559ee5) by @github-actions[bot]
+* chore: update release metadata for v3.72.2 [skip ci] (e4bb013) by @github-actions[bot]
+* chore: update release metadata for v3.72.1 [skip ci] (dc7efd1) by @github-actions[bot]
+* chore: update release metadata for v3.72.0 [skip ci] (85d4232) by @github-actions[bot]
+* chore: update release metadata for v3.71.1 [skip ci] (5d71eb0) by @github-actions[bot]
+* chore: update release metadata for v3.71.0 [skip ci] (4cd7fa4) by @github-actions[bot]
+* chore: update release metadata for v3.70.0 [skip ci] (a99f375) by @github-actions[bot]
+* chore: update release metadata for v3.69.0 [skip ci] (88beaac) by @github-actions[bot]
+* chore: update release metadata for v3.68.0 [skip ci] (962e7f5) by @github-actions[bot]
+* chore: update release metadata for v3.67.0 [skip ci] (5180d63) by @github-actions[bot]
+* chore: update release metadata for v3.66.0 [skip ci] (e2c728d) by @github-actions[bot]
+* chore: update release metadata for v3.65.0 [skip ci] (792d5b9) by @github-actions[bot]
+* chore: update release metadata for v3.64.1 [skip ci] (bf7bb52) by @github-actions[bot]
+* chore: update release metadata for v3.64.0 [skip ci] (bcd790f) by @github-actions[bot]
+* chore: update release metadata for v3.63.0 [skip ci] (6df4a34) by @github-actions[bot]
+* chore: update release metadata for v3.62.0 [skip ci] (82f156d) by @github-actions[bot]
+* chore: update release metadata for v3.61.0 [skip ci] (16dde37) by @github-actions[bot]
+* chore: update release metadata for v3.60.0 [skip ci] (e095983) by @github-actions[bot]
+* chore: update release metadata for v3.59.0 [skip ci] (8f9adff) by @github-actions[bot]
+* chore: update release metadata for v3.58.0 [skip ci] (956ee64) by @github-actions[bot]
+* chore: update release metadata for v3.57.1 [skip ci] (eafea93) by @github-actions[bot]
+* chore: update release metadata for v3.57.0 [skip ci] (7ec0863) by @github-actions[bot]
+* chore: update release metadata for v3.56.1 [skip ci] (6c3b0b8) by @github-actions[bot]
+* chore: update release metadata for v3.56.0 [skip ci] (59c4903) by @github-actions[bot]
+* chore: update release metadata for v3.55.0 [skip ci] (1d56069) by @github-actions[bot]
+* chore: update release metadata for v3.54.2 [skip ci] (f8f80de) by @github-actions[bot]
+* chore: update release metadata for v3.54.1 [skip ci] (50c9c41) by @github-actions[bot]
+* chore: update release metadata for v3.54.0 [skip ci] (ed39155) by @github-actions[bot]
+* chore: update release metadata for v3.53.3 [skip ci] (be990e8) by @github-actions[bot]
+* chore: update release metadata for v3.53.2 [skip ci] (9cf8f71) by @github-actions[bot]
+* chore: update release metadata for v3.53.1 [skip ci] (ea36e28) by @github-actions[bot]
+* chore: update release metadata for v3.53.0 [skip ci] (dc2e714) by @github-actions[bot]
+* chore: update release metadata for v3.52.0 [skip ci] (d40bcb3) by @github-actions[bot]
+* chore: update release metadata for v3.51.0 [skip ci] (5e3f5f5) by @github-actions[bot]
+* chore: update release metadata for v3.50.0 [skip ci] (b198f41) by @github-actions[bot]
+* chore: update release metadata for v3.49.0 [skip ci] (4dac52b) by @github-actions[bot]
+* chore: update release metadata for v3.48.0 [skip ci] (6fdc762) by @github-actions[bot]
+* chore: update release metadata for v3.47.0 [skip ci] (8d6fc71) by @github-actions[bot]
+* chore: update release metadata for v3.46.0 [skip ci] (483e062) by @github-actions[bot]
+* chore: update release metadata for v3.45.0 [skip ci] (c757b19) by @github-actions[bot]
+* chore: update release metadata for v3.44.0 [skip ci] (2b79282) by @github-actions[bot]
+* chore: update release metadata for v3.43.0 [skip ci] (4f9b186) by @github-actions[bot]
+* chore: update release metadata for v3.42.2 [skip ci] (3284f12) by @github-actions[bot]
+* chore: update release metadata for v3.42.1 [skip ci] (1ea51ab) by @github-actions[bot]
+* chore: update release metadata for v3.42.0 [skip ci] (8776f73) by @github-actions[bot]
+* chore: update release metadata for v3.41.0 [skip ci] (6d016ce) by @github-actions[bot]
+* chore: update release metadata for v3.40.1 [skip ci] (521d687) by @github-actions[bot]
+* chore: update release metadata for v3.40.0 [skip ci] (b8def57) by @github-actions[bot]
+* chore: update release metadata for v3.39.0 [skip ci] (7f11225) by @github-actions[bot]
+* chore: update release metadata for v3.38.0 [skip ci] (759ab29) by @github-actions[bot]
+* chore: include version in patches filename (9b80836) by @waifucon
+* chore: update release metadata for v3.37.1 [skip ci] (e7fc67d) by @github-actions[bot]
+* chore: update release metadata for v3.37.0 [skip ci] (ef00010) by @github-actions[bot]
+* chore: update release metadata for v3.36.0 [skip ci] (d04aeca) by @github-actions[bot]
+* chore: update release metadata for v3.35.0 [skip ci] (fd5e9f7) by @github-actions[bot]
+* chore: update release metadata for v3.34.1 [skip ci] (eb4f10e) by @github-actions[bot]
+* chore: update release metadata for v3.34.0 [skip ci] (1c427a9) by @github-actions[bot]
+* chore: update release metadata for v3.33.1 [skip ci] (5ac873e) by @github-actions[bot]
+* chore: update release metadata for v3.33.0 [skip ci] (70848ea) by @github-actions[bot]
+* chore: update release metadata for v3.32.0 [skip ci] (55082a2) by @github-actions[bot]
+* Create FUNDING.yml (a125fdf) by @crimera
+* chore: update release metadata for v3.31.0 [skip ci] (6d31919) by @github-actions[bot]
+* chore: update release metadata for v3.30.4 [skip ci] (58199ed) by @github-actions[bot]
+* chore: update release metadata for v3.30.3 [skip ci] (2648407) by @github-actions[bot]
+* chore: use bug:/feat: issue title prefixes (126e023) by @crimera
+* chore: add NewX issue templates (ed3b1ef) by @crimera
+* chore: update release metadata for v3.30.2 [skip ci] (42f0290) by @github-actions[bot]
+* chore: update release metadata for v3.30.1 [skip ci] (6ec8280) by @github-actions[bot]
+* chore: update release metadata for v3.30.0 [skip ci] (cdf8034) by @github-actions[bot]
+* chore: update release metadata for v3.29.1 [skip ci] (5f4be7b) by @github-actions[bot]
+* chore: update release metadata for v3.29.0 [skip ci] (8c33b69) by @github-actions[bot]
+* chore: update release metadata for v3.28.0 [skip ci] (5699a88) by @github-actions[bot]
+* chore: update release metadata for v3.27.1 [skip ci] (ab331e7) by @github-actions[bot]
+* chore: update release metadata for v3.27.0 [skip ci] (ad60c00) by @github-actions[bot]
+* chore: update release metadata for v3.26.2 [skip ci] (8513d92) by @github-actions[bot]
+* chore: update release metadata for v3.26.1 [skip ci] (52f307c) by @github-actions[bot]
+* chore: update release metadata for v3.26.0 [skip ci] (bc43769) by @github-actions[bot]
+* chore: update release metadata for v3.25.1 [skip ci] (2f3d0e5) by @github-actions[bot]
+* chore: update release metadata for v3.25.0 [skip ci] (1a8ee9e) by @github-actions[bot]
+* Remove APKMirror integration and update dependencies (5b7b114) by @crimera
+* chore: update release metadata for v3.24.2 [skip ci] (a0bdb84) by @github-actions[bot]
+* chore: repair release versioning for v3.24.1 (d89ee79) by @crimera
+* chore: update release metadata for v3.23.5 [skip ci] (18fff42) by @github-actions[bot]
+* chore: update release metadata for v3.23.4 [skip ci] (d21b524) by @github-actions[bot]
+* chore: update release metadata for v3.24.0 [skip ci] (f940560) by @github-actions[bot]
+* chore: update release metadata for v3.23.3 [skip ci] (c522cfe) by @github-actions[bot]
+* chore: update release metadata for v3.23.2 [skip ci] (b40a12d) by @github-actions[bot]
+* chore: update release metadata for v3.23.1 [skip ci] (e92f34a) by @github-actions[bot]
+* chore: update release metadata for v3.23.0 [skip ci] (b2417e9) by @github-actions[bot]
+* chore: update release metadata for v3.22.0 [skip ci] (07eeaeb) by @github-actions[bot]
+* chore: update release metadata for v3.21.2 [skip ci] (fe6f642) by @github-actions[bot]
+* chore: update release metadata for v3.21.1 [skip ci] (7d58683) by @github-actions[bot]
+* chore: update release metadata for v3.21.0 [skip ci] (34c709a) by @github-actions[bot]
+* chore: update release metadata for v3.20.0 [skip ci] (1f35c3a) by @github-actions[bot]
+* chore: update release metadata for v3.19.3 [skip ci] (004d0da) by @github-actions[bot]
+* chore: update release metadata for v3.19.2 [skip ci] (f647b65) by @github-actions[bot]
+* chore: update release metadata for v3.19.1 [skip ci] (f4896ff) by @github-actions[bot]
+* chore: update release metadata for v3.19.0 [skip ci] (da6b1ba) by @github-actions[bot]
+* chore: update release metadata for v3.18.1 [skip ci] (e6b90a9) by @github-actions[bot]
+* chore: update release metadata for v3.18.0 [skip ci] (8039b27) by @github-actions[bot]
+* fix: omit release metadata from notes (ba37b18) by @crimera
+* chore: update release metadata for v3.17.0 [skip ci] (09e8a1c) by @github-actions[bot]
+* chore: update release metadata for v3.16.0 [skip ci] (ea4dd5c) by @github-actions[bot]
+* fix: omit upstream commit section from release notes (b3176d7) by @crimera
+* chore: update release metadata for v3.15.0 [skip ci] (7b85dbc) by @github-actions[bot]
+* chore: update release metadata for v3.14.0 [skip ci] (3498b23) by @github-actions[bot]
+* chore: update release metadata for v3.13.3 [skip ci] (8a5a0b7) by @github-actions[bot]
+* chore: update release metadata for v3.13.2 [skip ci] (b8aa44c) by @github-actions[bot]
+* chore: update release metadata for v3.13.1 [skip ci] (14af89f) by @github-actions[bot]
+* chore: update release metadata for v3.13.0 [skip ci] (268d708) by @github-actions[bot]
+* chore: update release metadata for v3.12.1 [skip ci] (1a0b4b7) by @github-actions[bot]
+* chore: update release metadata for v3.12.0 [skip ci] (42ef21f) by @github-actions[bot]
+* chore: update release metadata for v3.11.0 [skip ci] (2f18bb4) by @github-actions[bot]
+* fix: generate semantic changelog from Piko commits (ed4c999) by @crimera
+* chore: update release metadata for v3.10.7 [skip ci] (f5f7c38) by @github-actions[bot]
+* fix: format changelogs for Morphe app updates (f66771a) by @crimera
+* chore: update release metadata for v3.10.6 [skip ci] (8a41b93) by @github-actions[bot]
+* chore: update release metadata for v3.10.5 [skip ci] (e047fd3) by @github-actions[bot]
+* chore: update release metadata for v3.10.4 [skip ci] (f06cc45) by @github-actions[bot]
+* chore: update release metadata for v3.10.3 [skip ci] (b3fc0e8) by @github-actions[bot]
+* chore: update release metadata for v3.10.2 [skip ci] (d737216) by @github-actions[bot]
+* chore: update release metadata for v3.10.1 [skip ci] (393e764) by @github-actions[bot]
+* chore: update release metadata for v3.10.0 [skip ci] (ead3d02) by @github-actions[bot]
+* feat: add semantic release versions (1daf1a3) by @crimera
+* chore: update patches-bundle.json and CHANGELOG.md for 12.22.0-prod.01-01aec60 (b17be2d) by @github-actions[bot]
+* chore: update patches-bundle.json and CHANGELOG.md for 12.22.0-prod.01-e7cb40f (493a5db) by @github-actions[bot]
+* chore: update patches-bundle.json and CHANGELOG.md for 12.22.0-prod.01-fceaaf2 (c2e4439) by @github-actions[bot]
+* chore: update patches-bundle.json and CHANGELOG.md for 12.22.0-prod.01-3c75b44 (3e50834) by @github-actions[bot]
+* Keep bring back twitter assets (49a0a25) by @crimera
+* chore: update patches-bundle.json and CHANGELOG.md for 12.22.0-prod.01-3a3fa60 (82e5dd7) by @github-actions[bot]
+* chore: update patches-bundle.json and CHANGELOG.md for 12.22.0-prod.01-f384055 (7c6fc0e) by @github-actions[bot]
+* chore: update patches-bundle.json and CHANGELOG.md for 12.22.0-prod.01-b64d10b (d5431df) by @github-actions[bot]
+* chore: update patches-bundle.json and CHANGELOG.md for 12.22.0-prod.01-1ea926c (0db4320) by @github-actions[bot]
+* chore: update patches-bundle.json and CHANGELOG.md for 12.22.0-beta.01-dfc8c56 (ef4a781) by @github-actions[bot]
+* fix: update release notes with new patches (e86f3c8) by @crimera
+* chore: update patches-bundle.json and CHANGELOG.md for 12.22.0-beta.01-d628357 (28ff9ca) by @github-actions[bot]
+* chore: update patches-bundle.json and CHANGELOG.md for 12.22.0-beta.01-f7a090a (b71e355) by @github-actions[bot]
+* chore: update patches-bundle.json and CHANGELOG.md for 12.19.1-release.0-229b738 (9f6d8e1) by @github-actions[bot]
+* feat: add pre-build cleanup to keep only NewX patches and extensions (49796ba) by @crimera
+* chore: update patches-bundle.json and CHANGELOG.md for 12.19.1-release.0-b1f727c (587548b) by @github-actions[bot]
+* chore: include commit hash in patches-bundle and changelog version (6a6d03e) by @crimera
+* docs: move Add to Morphe button to top, remove release link, add initial CHANGELOG.md (6120885) by @crimera
+* docs: add 'Add to Morphe' button to README (ad71697) by @crimera
+* feat: generate and update CHANGELOG.md with commits and new patches on release (c8742dd) by @crimera
+* chore: update patches-bundle.json for 12.19.1-release.0-56f2321 (3a56cd5) by @github-actions[bot]
+* fix: remove Z from patches-bundle created_at and drop gen_gpg_key.sh (0e8d1cd) by @crimera
+* chore: update patches-bundle.json for 12.19.1-release.0-56f2321 (3347eb0) by @github-actions[bot]
+* Add patches-bundle.json and sign releases; drop README releasing note (cb76f93) by @crimera
+* Fix GPG step guard to use vars context in if (77e243e) by @crimera
+* Add GPG signing for patch bundle releases (39e3be0) by @crimera
+* Update README.md (5e8633c) by @crimera
+* Improved release (156426c) by @crimera
+* Migrate to the new naming (b864fce) by @crimera
+* Drop 'Bring back twitter' patch from builds (45f7359) by @crimera
+* Authenticate GitHub API requests in builds (bb5bbfd) by @crimera
+* Restrict forced patching to selected patches (cdd2aa5) by @crimera
+* Force Morphe to try older-version patches (b90782c) by @crimera
+* Include 'Bring back twitter' patch in builds (10db1bc) by @crimera
+* Remove NEW marker note from changelog (a83b357) by @crimera
+* support architecture-specific beta bundles (7b0390a) by @crimera
+* select supported beta APKMirror versions (c88fa11) by @crimera
+* include patch and Piko change metadata in releases (36a6796) by @crimera
+* ci: cache Gradle builds (9cab248) by @crimera
+* include applied patches in release notes (863d853) by @crimera
+* dynamically include X-Lite patches (c7644d3) by @crimera
+* include new X-Lite patches (ced1d90) by @crimera
+* include Piko commit in build artifacts (6398b35) by @crimera
+* add new patches (5efb8f1) by @crimera
+* docs: describe x-lite Piko builds (a0a82e0) by @crimera
+* fix: apply x-lite patches to supported X versions (c2bde13) by @crimera
+* Remove Telegram reporting from builds (6aabf1c) by @crimera
+* Allow initial release build (4a9d3b4) by @crimera
+* Refresh build workflow registration (3d24d5a) by @crimera
+* Build piko-lite with X-Lite patches (e7cac6e) by @crimera
+* Use universal APKM bundles with Morphe (fbe760a) by @crimera
+* Fix Morphe CLI asset matching (d66b44f) by @crimera
+* Update download_bins.py (35bd974) by @crimera
+* Update morphe cli repo (90d3e7c) by @crimera
+* Update hava version (95b4fe5) by @crimera
+* Improve GitHub API calls and telegram reporting (b4d18c3) by @crimera
+* Add repo constant (5abba2e) by @crimera
+* Update README with latest build link and credits (bea218a) by @crimera
+* Revert "Pin to previous stable version for now" (bb22115) by @crimera
+* Pin to previous stable version for now (6664c31) by @crimera
+* Enable prerelease downloads in Morphe CLI (b502501) by @crimera
+* Migrate to morphe and fallback to arm64-v8a apk (15f3bf7) by @crimera
+* Use setup-uv v7 (bfeb88f) by @crimera
+* Migrate to uv (b0882d7) by @crimera
+* Add flake dev env (39fbd82) by @crimera
+* Use cloudscrape for apkmirror (2e7fec4) by @crimera
+* Compress native libraries when merging split apks (b315086) by @kitadai31
+* Update codebase to ReVanced v21 (780669c) by @lluni
+* Fix URL format for Twitter APK link (d4fe671) by @Devin Arthur
+* Update link format for Twitter version in manual function (439c6d7) by @Devin Arthur
+* Add back app icons patch (64f4119) by @crimera
+* Update main.py (c92641d) by @Devin Arthur
+* add back some patches (9f2dadc) by @crimera
+* Exclude broken patches for now (7b2ba0d) by @crimera
+* Update manual.yaml permission (420cd06) by @crimera
+* Update twitter page (7969813) by @crimera
+* Remove auto release (01a8723) by @crimera
+* use the old version of revanced-cli (1083eb5) by @crimera
+* use uv (f1dc188) by @crimera
+* support for downloading specific version of bins (a8befac) by @crimera
+* change environment variable name (a3c7572) by @crimera
+* add GITHUB_TOKEN in workflows (b52c804) by @crimera
+* use GITHUB_TOKEN (df637d3) by @crimera
+* Update build.yaml (3ce4dd7) by @crimera
+* use release version as the title for releases (ea2ec9a) by @crimera
+* Update download_bins.py (aae29b6) by @crimera
+* Update download_bins.py (0610567) by @crimera
+* Update download_bins.py (e3f56e3) by @crimera
+* allow fetching pre-releases (dbb8b58) by @MondayNitro
+* updated manual.yaml (a149117) by @swakwork
+* Added manual build trigger (257171a) by @swakwork
+* add changelogs (1410f5d) by @crimera
+* another revert (6dcc17d) by @crimera
+* revert some changes (8db42d6) by @crimera
+* idk (bfb238f) by @crimera
+* remove apkeditor binary (76959d4) by @crimera
+* add new patches (69696a9) by @crimera
+* Update README.md (18f3450) by @crimera
+* add TG environment variables on worflow (8d86d04) by @crimera
+* Create README.md (484e93c) by @crimera
+* report to telegram (cbdeed5) by @crimera
+* extract common_includes (0d8c428) by @crimera
+* add apkeditor binary (8405a7b) by @crimera
+* do not panic a new version is out (34cbda6) by @crimera
+* refactor (b9d4772) by @crimera
+* Update build.yaml (9702a09) by @crimera
+* Update build.yaml (2795d80) by @crimera
+* attempt to fix auth (c066e26) by @crimera
+* Update build.yaml (8b36b64) by @crimera
+* fix typo (ccdff59) by @crimera
+* Update build.yaml (559850a) by @crimera
+* add comma and f-string (a65fbda) by @crimera
+* Forgot to add commas (914694c) by @crimera
+* run job everyday (5e85282) by @crimera
+* Refactor code structure and move functions to `utils.py` (63d0213) by @crimera
+* reuse apk when patching, only download if file doesn't already exist (1e94270) by @crimera
+* add release job onto the main script (c1b5e64) by @crimera
+* separate building of variants in another file (61baacd) by @crimera
+* move some functions to `utils.py` (4fd321e) by @crimera
+* include other variants (48ec0e4) by @crimera
+* rewrite (9c25674) by @crimera
+* download bins lazyly (6c27345) by @crimera
+* improve release name (55c02e5) by @crimera
+* fix filename (8532d36) by @crimera
+* Change secret name cause secrets starting with GITHUB is not allowed anymore (13b7a8b) by @crimera
+* add release (fbfa3d7) by @crimera
+* panic if no new release is found (cc8e4ab) by @crimera
+* added keystore (606505a) by @crimera
+* use inotia00's revanced cli (fd7a5ea) by @crimera
+* add comments when downloading files (476740e) by @crimera
+* integrations should end with .apk (0fc07db) by @Linux User
+* add bins directory before running download (eb5d7e3) by @Linux User
+* use 3.12.4 python (846b3b9) by @Linux User
+* added download_bins (7e3ead0) by @Linux User
+* initial commit (7979a0f) by @Linux User
+
+**Full Changelog**: https://github.com/Rakastanyan/piko-newx/compare/v3.75.0...v3.75.0
+
+### New Patches
+* **Twitter:** NewX: 移除广告 / 移除廣告
+* **Twitter:** NewX: 禁用blur effects / 停用blur effects
+* **Twitter:** NewX: 恢复 Twitter 经典蓝鸟图标与品牌 / 恢復 Twitter 經典藍鳥圖示與品牌
+* **Twitter:** NewX: Browse tweet object
+* **Twitter:** NewX: Open canonical URLs
+* **Twitter:** NewX: 应用分身（共存版） / 應用程式分身（雙開共存）
+* **Twitter:** NewX: 崩溃与调试日志 / 當機與偵錯日誌
+* **Twitter:** NewX: 自定义字体 / 自訂字型
+* **Twitter:** NewX: 自定义sharing domain / 自訂sharing domain
+* **Twitter:** NewX: Permanent 分享 links
+* **Twitter:** NewX: 移除share 追踪参数 parameters / 移除share 追蹤參數 parameters
+* **Twitter:** NewX: 自定义drawer items / 自訂drawer items
+* **Twitter:** NewX: Theme
+* **Twitter:** NewX: Feature switch overrides
+* **Twitter:** NewX: 启用quality-of-life feature flags / 啟用quality-of-life feature flags
+* **Twitter:** NewX: 自定义inline actions / 自訂inline actions
+* **Twitter:** NewX: Inline 下载按钮 / Inline 下載按鈕
+* **Twitter:** NewX: Redirect 下载 to chosen folder / Redirect 下載 to chosen folder
+* **Twitter:** NewX: 自定义media menu items / 自訂media menu items
+* **Twitter:** NewX: Set default media tab
+* **Twitter:** NewX: Gallery 个人主页照片 tab / Gallery 個人資料頁照片 tab
+* **Twitter:** NewX: 自定义navigation bar / 自訂navigation bar
+* **Twitter:** NewX: 隐藏post author actions / 隱藏post author actions
+* **Twitter:** NewX: 隐藏post reply bar / 隱藏post reply bar
+* **Twitter:** NewX: 自定义post menu items / 自訂post menu items
+* **Twitter:** NewX: Set default 个人主页帖子 sorting / Set default 個人資料頁貼文 sorting
+* **Twitter:** NewX: 自定义profile tabs / 自訂profile tabs
+* **Twitter:** NewX: Set default reply sorting
+* **Twitter:** NewX: Server error logging
+* **Twitter:** NewX: 禁用video player scrolling / 停用video player scrolling
+* **Twitter:** NewX: 隐藏 Premium 会员推广 / 隱藏 Premium 會員推廣
+* **Twitter:** NewX: Unlock color customization
+* **Twitter:** NewX: 解锁媒体下载 / 解鎖媒體下載
+* **Twitter:** NewX: 自定义timeline tabs / 自訂timeline tabs
+* **Twitter:** NewX: 禁用automatic 时间线 refresh / 停用automatic 動態時報 refresh
+* **Twitter:** NewX: 过滤For You by topic / 過滤For You by topic
+* **Twitter:** NewX: 隐藏AI-generated 帖子 / 隱藏AI-generated 貼文
+* **Twitter:** NewX: 隐藏发现更多 / 隱藏探索更多
+* **Twitter:** NewX: 隐藏compose button / 隱藏compose button
+* **Twitter:** NewX: 隐藏new 帖子 pill / 隱藏new 貼文 pill
+* **Twitter:** NewX: 隐藏帖子分隔线 / 隱藏貼文分隔線
+* **Twitter:** NewX: 隐藏 Spaces 空间栏 / 隱藏 Spaces 空間列
+* **Twitter:** NewX: 隐藏timeline tabs bar / 隱藏timeline tabs bar
+* **Twitter:** NewX: 隐藏推荐关注 / 隱藏推薦跟隨
+* **Twitter:** NewX: 恢复pinned home tab / 恢復pinned home tab
+* **Twitter:** NewX: 恢复timeline position / 恢復timeline position
+* **Twitter:** NewX: 直接查看投票结果 / 直接查看投票結果
+* **Twitter:** NewX: 自动显示敏感媒体 / 自動顯示敏感媒體
+* **Twitter:** NewX: 隐藏posts by verified account type / 隱藏posts by verified account type
+* **Twitter:** NewX: 过滤posts by keyword / 過滤posts by keyword
+* **Twitter:** NewX: 翻译增强 / 翻譯增強
+
 ## [3.75.0](https://github.com/crimera/piko-newx/compare/v3.74.0...v3.75.0) (2026-11-08)
 
 ### ✨ New Features
