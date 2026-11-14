@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://morphe.software/add-source?github=crimera/piko-newx">
+  <a href="https://morphe.software/add-source?github=Rakastanyan/piko-newx">
     <img src="assets/add-to-morphe.svg" alt="Add to Morphe" height="48">
   </a>
 </p>
