@@ -1,3 +1,15 @@
+## [3.75.1](https://github.com/Rakastanyan/piko-newx/compare/v3.75.0...v3.75.1) (2026-11-15)
+
+## What's Changed
+
+* fix (d6a2cc2) by @Rakastanyan
+* 回退 (3f985af) by @Rakastanyan
+* 回退操作 (373de5f) by @Rakastanyan
+* Update README.md (ae7370a) by @Rakastanyan
+* chore: update release metadata for v3.75.0 [skip ci] (06e5a34) by @github-actions[bot]
+
+**Full Changelog**: https://github.com/Rakastanyan/piko-newx/compare/v3.75.0...v3.75.1
+
 ## [3.75.0](https://github.com/Rakastanyan/piko-newx/releases/tag/v3.75.0) (2026-11-14)
 
 ## What's Changed
