@@ -223,21 +223,11 @@
     "NewX: Bring back twitter": {
       "zh-rCN": {
         "name": "NewX: 恢复 Twitter 经典蓝鸟图标与名称",
-        "description": "将应用桌面图标与名称从 X 恢复为经典的 Twitter 蓝鸟样式。"
+        "description": "将应用图标、启动画面与文案从 X 恢复为经典 Twitter 样式。"
       },
       "zh-rTW": {
         "name": "NewX: 恢復 Twitter 經典藍鳥圖示與名稱",
-        "description": "將應用程式桌面圖示與名稱從 X 恢復為經典的 Twitter 藍鳥樣式。"
-      }
-    },
-    "NewX: Restore Twitter branding": {
-      "zh-rCN": {
-        "name": "NewX: 恢复 Twitter 经典蓝鸟图标与品牌",
-        "description": "将应用桌面图标、启动画面与品牌名称从 X 恢复为经典的 Twitter 蓝鸟样式。"
-      },
-      "zh-rTW": {
-        "name": "NewX: 恢復 Twitter 經典藍鳥圖示與品牌",
-        "description": "將應用程式桌面圖示、啟動畫面與品牌名稱從 X 恢復為經典的 Twitter 藍鳥樣式。"
+        "description": "將應用程式圖示、啟動畫面與文字從 X 恢復為經典 Twitter 樣式。"
       }
     }
   },
@@ -260,26 +250,6 @@
       "zh-rTW": {
         "title": "應用程式名稱",
         "description": "為修補後的應用程式指定新的顯示名稱；輸入「X」則略過修改名稱。"
-      }
-    },
-    "Restore Twitter icon": {
-      "zh-rCN": {
-        "title": "恢复经典 Twitter 蓝鸟图标",
-        "description": "将应用桌面启动图标替换为经典的蓝鸟图标。"
-      },
-      "zh-rTW": {
-        "title": "恢復經典 Twitter 藍鳥圖示",
-        "description": "將應用程式桌面啟動圖示替換為經典的藍鳥圖示。"
-      }
-    },
-    "Restore Twitter name": {
-      "zh-rCN": {
-        "title": "恢复应用名称为 Twitter",
-        "description": "将应用在桌面上显示的名称修改为 Twitter。"
-      },
-      "zh-rTW": {
-        "title": "恢復應用程式名稱為 Twitter",
-        "description": "將應用程式在桌面上顯示的名稱修改為 Twitter。"
       }
     }
   }

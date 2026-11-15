@@ -33,26 +33,26 @@ def get_supported_versions(constants: str) -> frozenset[str]:
 
 
 def pre_build_cleanup(piko_directory: Path) -> None:
-    """Remove Instagram, Twitter, and legacy/cross-app patches/extensions before building."""
+    """Remove Instagram, Twitter, and legacy patches/extensions before building."""
+    # Remove non-NewX patch source packages (including app/revanced legacy patches)
     for path in [
         piko_directory / "patches/src/main/kotlin/app/crimera/patches/instagram",
         piko_directory / "patches/src/main/kotlin/app/crimera/patches/twitter",
         piko_directory / "patches/src/main/kotlin/app/crimera/patches/revanced",
         piko_directory / "patches/src/main/kotlin/app/revanced",
-        piko_directory / "patches/src/main/kotlin/app/morphe/patches/all",
     ]:
         if path.exists():
             shutil.rmtree(path)
 
+    # Remove non-NewX extension modules
     for path in [
         piko_directory / "extensions/instagram",
         piko_directory / "extensions/twitter",
-        piko_directory / "extensions/all",
     ]:
         if path.exists():
             shutil.rmtree(path)
 
-    # Keep twitter/bringbacktwitter assets for RestoreTwitterBrandingPatch
+    # Keep twitter/bringbacktwitter assets for Bring back twitter patch
     twitter_res = piko_directory / "patches/src/main/resources/twitter"
     if twitter_res.exists():
         for item in twitter_res.iterdir():
