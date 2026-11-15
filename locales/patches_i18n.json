@@ -229,6 +229,16 @@
         "name": "NewX: 恢復 Twitter 經典藍鳥圖示與名稱",
         "description": "將應用程式圖示、啟動畫面與文字從 X 恢復為經典 Twitter 樣式。"
       }
+    },
+    "NewX: Restore Twitter branding": {
+      "zh-rCN": {
+        "name": "NewX: 恢复 Twitter 经典蓝鸟图标与品牌",
+        "description": "将应用桌面图标、启动画面与品牌名称从 X 恢复为经典的 Twitter 蓝鸟样式。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 恢復 Twitter 經典藍鳥圖示與品牌",
+        "description": "將應用程式桌面圖示、啟動畫面與品牌名稱從 X 恢復為經典的 Twitter 藍鳥樣式。"
+      }
     }
   },
   "options": {

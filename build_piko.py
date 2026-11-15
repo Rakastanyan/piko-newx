@@ -40,6 +40,7 @@ def pre_build_cleanup(piko_directory: Path) -> None:
         piko_directory / "patches/src/main/kotlin/app/crimera/patches/twitter",
         piko_directory / "patches/src/main/kotlin/app/crimera/patches/revanced",
         piko_directory / "patches/src/main/kotlin/app/revanced",
+        piko_directory / "patches/src/main/kotlin/app/morphe/patches/all",
     ]:
         if path.exists():
             shutil.rmtree(path)
@@ -48,6 +49,7 @@ def pre_build_cleanup(piko_directory: Path) -> None:
     for path in [
         piko_directory / "extensions/instagram",
         piko_directory / "extensions/twitter",
+        piko_directory / "extensions/all",
     ]:
         if path.exists():
             shutil.rmtree(path)
