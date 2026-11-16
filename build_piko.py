@@ -107,6 +107,7 @@ def sanitize_shared_all_patches(piko_directory: Path) -> None:
                 r"\1import app.crimera.patches.newx.utils.Constants.COMPATIBILITY_NEW_X\n",
                 modified,
                 count=1,
+                flags=re.MULTILINE,
             )
 
         if modified != original:
