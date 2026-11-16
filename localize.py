@@ -142,17 +142,6 @@ _EN_EXACT_MAP: dict[str, str] = {
     "Small": "小图",
     "Highest bitrate": "最高码率",
     "Lowest bitrate": "最低码率",
-    "Hide post author actions": "隐藏帖子作者操作按钮",
-    "Hide post author actions on posts": "隐藏帖子上的作者操作按钮",
-    "Disable persistent bottom navigation": "禁用固定底部导航栏",
-    "Restore Twitter bird in top bar": "在顶栏恢复 Twitter 蓝鸟图标",
-    "Shared link rewriting": "分享链接重写",
-    "Hide AI-generated posts": "隐藏 AI 生成的帖子",
-    "Customize inline actions": "自定义帖子内联操作栏",
-    "Customize default media tab": "自定义个人主页默认媒体标签页",
-    "Customize navigation bar items": "自定义底部导航栏项目",
-    "Customize default reply sorting": "自定义默认回复排序",
-    "Filter posts by keyword": "按关键词过滤帖子",
 }
 
 _EN_WORD_REPLACEMENTS: tuple[tuple[str, str], ...] = (
@@ -187,33 +176,6 @@ _EN_WORD_REPLACEMENTS: tuple[tuple[str, str], ...] = (
     ("Prevents ", "防止"),
     ("Replace ", "替换"),
     ("Replaces ", "替换"),
-    ("persistent bottom navigation", "固定底部导航栏"),
-    ("bottom navigation bar", "底部导航栏"),
-    ("bottom navigation", "底部导航栏"),
-    ("navigation bar items", "底部导航栏项目"),
-    ("post author actions", "帖子作者操作按钮"),
-    ("author actions", "作者操作按钮"),
-    ("post author", "帖子作者"),
-    ("shared link rewriting", "分享链接重写"),
-    ("link rewriting", "链接重写"),
-    ("AI-generated posts", "AI 生成的帖子"),
-    ("AI-generated", "AI 生成的"),
-    ("inline actions", "内联操作栏"),
-    ("default media tab", "默认媒体标签页"),
-    ("default reply sorting", "默认回复排序"),
-    ("reply sorting", "回复排序"),
-    ("drawer items", "侧边抽屉栏项目"),
-    ("feature switch overrides", "特性开关覆盖"),
-    ("feature switches", "特性开关"),
-    ("feature flag", "特性开关"),
-    ("Twitter bird", "Twitter 蓝鸟图标"),
-    ("top bar", "顶栏"),
-    ("compose button", "发帖按钮"),
-    ("by keyword", "按关键词"),
-    ("keyword", "关键词"),
-    ("canonical URLs", "完整真实网址"),
-    ("author actions", "作者操作按钮"),
-    ("post author", "帖子作者"),
     ("promoted posts", "推广帖子"),
     ("sponsored posts", "赞助帖子"),
     ("advertisements", "广告"),
@@ -259,21 +221,6 @@ _EN_WORD_REPLACEMENTS: tuple[tuple[str, str], ...] = (
     ("photos", "照片"),
     ("posts", "帖子"),
     ("post", "帖子"),
-    ("actions", "操作按钮"),
-    ("author", "作者"),
-    ("replies", "回复"),
-    ("reply", "回复"),
-    ("buttons", "按钮"),
-    ("button", "按钮"),
-    ("tabs", "标签页"),
-    ("tab", "标签页"),
-    ("links", "链接"),
-    ("link", "链接"),
-    ("items", "项目"),
-    ("item", "项目"),
-    ("in the ", "在"),
-    ("on ", "在"),
-    ("the ", ""),
 )
 
 
@@ -481,15 +428,8 @@ def localize_patch_options(
     patches_ci = {k.lower(): v for k, v in raw_patches.items()}
     options_ci = {k.lower(): v for k, v in raw_options.items()}
 
-    target_dirs = [
-        piko_directory / "patches/src/main/kotlin/app/crimera/patches/newx",
-        piko_directory / "patches/src/main/kotlin/app/morphe/patches/all",
-    ]
-    kt_files = []
-    for d in target_dirs:
-        if d.is_dir():
-            kt_files.extend(sorted(d.rglob("*.kt")))
-    if not kt_files:
+    newx_kt_dir = piko_directory / "patches/src/main/kotlin/app/crimera/patches/newx"
+    if not newx_kt_dir.is_dir():
         return 0
 
     def format_localized_pair(cn_val: str, tw_val: str) -> str:
@@ -536,14 +476,14 @@ def localize_patch_options(
     updated_files = 0
     patch_pattern = re.compile(
         rf'(\bname\s*=\s*)({KOTLIN_CONCAT_STR})'
-        rf'(?:(\s*,[\s\S]{{0,120}}?\bdescription\s*=\s*)({KOTLIN_CONCAT_STR}))?'
+        rf'(?:(\s*,\s*\bdescription\s*=\s*)({KOTLIN_CONCAT_STR}))?'
     )
     option_pattern = re.compile(
         rf'(\btitle\s*=\s*)({KOTLIN_CONCAT_STR})'
-        rf'(?:(\s*,[\s\S]{{0,120}}?\bdescription\s*=\s*)({KOTLIN_CONCAT_STR}))?'
+        rf'(?:(\s*,\s*\bdescription\s*=\s*)({KOTLIN_CONCAT_STR}))?'
     )
 
-    for kt_file in kt_files:
+    for kt_file in sorted(newx_kt_dir.rglob("*.kt")):
         original = kt_file.read_text(encoding="utf-8")
 
         def _patch_repl(m: re.Match) -> str:

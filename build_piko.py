@@ -40,7 +40,6 @@ def pre_build_cleanup(piko_directory: Path) -> None:
         piko_directory / "patches/src/main/kotlin/app/crimera/patches/twitter",
         piko_directory / "patches/src/main/kotlin/app/crimera/patches/revanced",
         piko_directory / "patches/src/main/kotlin/app/revanced",
-        piko_directory / "patches/src/main/kotlin/app/morphe/patches/all",
     ]:
         if path.exists():
             shutil.rmtree(path)
@@ -49,7 +48,6 @@ def pre_build_cleanup(piko_directory: Path) -> None:
     for path in [
         piko_directory / "extensions/instagram",
         piko_directory / "extensions/twitter",
-        piko_directory / "extensions/all",
     ]:
         if path.exists():
             shutil.rmtree(path)
@@ -70,38 +68,6 @@ def pre_build_cleanup(piko_directory: Path) -> None:
             for matched in addresources_dir.glob(f"*/{res_name}"):
                 if matched.is_dir():
                     shutil.rmtree(matched)
-
-
-
-def sanitize_shared_all_patches(piko_directory: Path) -> None:
-    """Keep cross-app patches under app/morphe/patches/all while stripping removed instagram/twitter references."""
-    all_dir = piko_directory / "patches/src/main/kotlin/app/morphe/patches/all"
-    if not all_dir.is_dir():
-        return
-
-    for kt_file in sorted(all_dir.rglob("*.kt")):
-        original = kt_file.read_text(encoding="utf-8")
-        # Remove imports referencing removed instagram/twitter/revanced packages
-        lines = [
-            line for line in original.splitlines(keepends=True)
-            if not re.match(r"^\s*import\s+app\.crimera\.patches\.(instagram|twitter|revanced)\.", line)
-        ]
-        modified = "".join(lines)
-
-        # Strip COMPATIBILITY_X and COMPATIBILITY_INSTAGRAM from compatibleWith(...)
-        has_newx = "COMPATIBILITY_NEW_X" in modified
-        modified = re.sub(r"\bCOMPATIBILITY_X\b\s*,\s*", "", modified)
-        modified = re.sub(r",\s*\bCOMPATIBILITY_X\b", "", modified)
-        modified = re.sub(r"\bCOMPATIBILITY_INSTAGRAM\b\s*,\s*", "", modified)
-        modified = re.sub(r",\s*\bCOMPATIBILITY_INSTAGRAM\b", "", modified)
-        if not has_newx:
-            modified = re.sub(r"\bCOMPATIBILITY_X\b|\bCOMPATIBILITY_INSTAGRAM\b", "COMPATIBILITY_NEW_X", modified)
-        else:
-            modified = re.sub(r"compatibleWith\(\s*,", "compatibleWith(", modified)
-            modified = re.sub(r",\s*\)", ")", modified)
-
-        if modified != original:
-            kt_file.write_text(modified, encoding="utf-8")
 
 
 def set_project_version(piko_directory: Path, version: str) -> None:
@@ -155,7 +121,6 @@ def build_piko_patches(
         )
 
         pre_build_cleanup(piko_directory)
-        sanitize_shared_all_patches(piko_directory)
         apply_chinese_localization(piko_directory, patch_locale=patch_locale)
         set_project_version(piko_directory, patch_version)
 
