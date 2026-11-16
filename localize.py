@@ -428,8 +428,15 @@ def localize_patch_options(
     patches_ci = {k.lower(): v for k, v in raw_patches.items()}
     options_ci = {k.lower(): v for k, v in raw_options.items()}
 
-    newx_kt_dir = piko_directory / "patches/src/main/kotlin/app/crimera/patches/newx"
-    if not newx_kt_dir.is_dir():
+    target_dirs = [
+        piko_directory / "patches/src/main/kotlin/app/crimera/patches/newx",
+        piko_directory / "patches/src/main/kotlin/app/morphe/patches/all",
+    ]
+    kt_files = []
+    for d in target_dirs:
+        if d.is_dir():
+            kt_files.extend(sorted(d.rglob("*.kt")))
+    if not kt_files:
         return 0
 
     def format_localized_pair(cn_val: str, tw_val: str) -> str:
@@ -476,14 +483,14 @@ def localize_patch_options(
     updated_files = 0
     patch_pattern = re.compile(
         rf'(\bname\s*=\s*)({KOTLIN_CONCAT_STR})'
-        rf'(?:(\s*,\s*\bdescription\s*=\s*)({KOTLIN_CONCAT_STR}))?'
+        rf'(?:(\s*,[\s\S]{{0,120}}?\bdescription\s*=\s*)({KOTLIN_CONCAT_STR}))?'
     )
     option_pattern = re.compile(
         rf'(\btitle\s*=\s*)({KOTLIN_CONCAT_STR})'
-        rf'(?:(\s*,\s*\bdescription\s*=\s*)({KOTLIN_CONCAT_STR}))?'
+        rf'(?:(\s*,[\s\S]{{0,120}}?\bdescription\s*=\s*)({KOTLIN_CONCAT_STR}))?'
     )
 
-    for kt_file in sorted(newx_kt_dir.rglob("*.kt")):
+    for kt_file in kt_files:
         original = kt_file.read_text(encoding="utf-8")
 
         def _patch_repl(m: re.Match) -> str:

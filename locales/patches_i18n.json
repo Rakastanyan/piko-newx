@@ -229,6 +229,306 @@
         "name": "NewX: 恢復 Twitter 經典藍鳥圖示與名稱",
         "description": "將應用程式圖示、啟動畫面與文字從 X 恢復為經典 Twitter 樣式。"
       }
+    },
+    "NewX: Restore Twitter branding": {
+      "zh-rCN": {
+        "name": "NewX: 恢复 Twitter 经典蓝鸟图标与品牌",
+        "description": "将应用桌面图标、启动画面与品牌名称从 X 恢复为经典的 Twitter 蓝鸟样式。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 恢復 Twitter 經典藍鳥圖示與品牌",
+        "description": "將應用程式桌面圖示、啟動畫面與品牌名稱從 X 恢復為經典的 Twitter 藍鳥樣式。"
+      }
+    },
+    "Disable Play Store updates": {
+      "zh-rCN": {
+        "name": "禁用 Play 商店自动更新",
+        "description": "阻止 Google Play 商店自动覆盖更新已修补的应用。"
+      },
+      "zh-rTW": {
+        "name": "停用 Play 商店自動更新",
+        "description": "阻止 Google Play 商店自動覆蓋更新已修補的應用程式。"
+      }
+    },
+    "NewX: Disable Play Store updates": {
+      "zh-rCN": {
+        "name": "NewX: 禁用 Play 商店自动更新",
+        "description": "阻止 Google Play 商店自动覆盖更新已修补的应用。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 停用 Play 商店自動更新",
+        "description": "阻止 Google Play 商店自動覆蓋更新已修補的應用程式。"
+      }
+    },
+    "NewX: Change version code": {
+      "zh-rCN": {
+        "name": "NewX: 修改版本号（Version Code）",
+        "description": "修改应用内部版本号，防止应用商店提示更新并允许降级安装。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 修改版本號（Version Code）",
+        "description": "修改應用程式內部版本號，防止應用程式商店提示更新並允許降級安裝。"
+      }
+    },
+    "NewX: Clear tracking params": {
+      "zh-rCN": {
+        "name": "NewX: 清除分享追踪参数",
+        "description": "分享帖子链接时自动移除追踪参数。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 清除分享追蹤參數",
+        "description": "分享貼文連結時自動移除追蹤參數。"
+      }
+    },
+    "NewX: Custom sharing domain": {
+      "zh-rCN": {
+        "name": "NewX: 自定义分享域名",
+        "description": "自定义分享链接时使用的域名（如 fxtwitter.com）。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 自訂分享域名",
+        "description": "自訂分享連結時使用的域名（如 fxtwitter.com）。"
+      }
+    },
+    "NewX: Custom share menu": {
+      "zh-rCN": {
+        "name": "NewX: 自定义分享菜单",
+        "description": "替换并增强系统分享菜单功能。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 自訂分享選單",
+        "description": "替換並增強係統分享選單功能。"
+      }
+    },
+    "NewX: Browse tweet object": {
+      "zh-rCN": {
+        "name": "NewX: 查看推文对象数据",
+        "description": "在帖子菜单中添加查看推文底层 JSON 数据的调试选项。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 查看貼文對象數據",
+        "description": "在貼文選單中添加查看貼文底層 JSON 數據的偵錯選項。"
+      }
+    },
+    "NewX: Feature switches": {
+      "zh-rCN": {
+        "name": "NewX: 特性开关管理器",
+        "description": "在设置中启用 Feature Switches 特性开关查看与覆盖功能。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 功能開關管理器",
+        "description": "在設定中啟用 Feature Switches 功能開關查看與覆蓋功能。"
+      }
+    },
+    "NewX: Hook feature flag": {
+      "zh-rCN": {
+        "name": "NewX: 特性开关钩子",
+        "description": "提供实验性特性开关（Feature Flag）拦截与覆盖支持。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 功能開關鉤子",
+        "description": "提供實驗性功能開關（Feature Flag）攔截與覆蓋支持。"
+      }
+    },
+    "NewX: Control video auto scroll": {
+      "zh-rCN": {
+        "name": "NewX: 控制视频自动连播",
+        "description": "允许禁用沉浸式视频播放器中的自动下滑切换视频。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 控製影片自動連播",
+        "description": "允許停用沉浸式影片播放器中的自動下滑切換影片。"
+      }
+    },
+    "NewX: Disable immersive player": {
+      "zh-rCN": {
+        "name": "NewX: 禁用沉浸式视频播放器",
+        "description": "恢复经典视频播放器界面而非全屏沉浸式播放器。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 停用沉浸式影片播放器",
+        "description": "恢復經典影片播放器界面而非全屏沉浸式播放器。"
+      }
+    },
+    "NewX: Default video quality": {
+      "zh-rCN": {
+        "name": "NewX: 默认视频画质",
+        "description": "设置视频播放与下载时的默认清晰度。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 預設影片畫质",
+        "description": "設定影片播放與下載時的預設清晰度。"
+      }
+    },
+    "NewX: Custom download folder": {
+      "zh-rCN": {
+        "name": "NewX: 自定义下载文件夹",
+        "description": "自定义媒体与视频文件的本地保存目录。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 自訂下載資料夾",
+        "description": "自訂媒體與影片文件的本地保存目錄。"
+      }
+    },
+    "NewX: Add ability to copy media link": {
+      "zh-rCN": {
+        "name": "NewX: 复制媒体直链",
+        "description": "支持直接复制帖子内图片或视频的原始链接。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 復製媒體直鏈",
+        "description": "支持直接復製貼文內圖片或影片的原始連結。"
+      }
+    },
+    "NewX: Inline download": {
+      "zh-rCN": {
+        "name": "NewX: 帖子内联下载",
+        "description": "在帖子底部操作栏添加一键媒体下载按钮与选择器。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 貼文內聯下載",
+        "description": "在貼文底部操作欄添加一鍵媒體下載按鈕與選擇器。"
+      }
+    },
+    "NewX: Canonical URLs": {
+      "zh-rCN": {
+        "name": "NewX: 显示完整真实网址",
+        "description": "跳过 t.co 短链跳转并直接显示展开后的原始网址。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 顯示完整真實網址",
+        "description": "跳過 t.co 短鏈跳轉並直接顯示展開後的原始網址。"
+      }
+    },
+    "NewX: Permanent share links": {
+      "zh-rCN": {
+        "name": "NewX: 永久分享链接",
+        "description": "分享链接中使用固定数字 ID 替代可变用户名。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 永久分享連結",
+        "description": "分享連結中使用固定數字 ID 替代可變使用者名稱。"
+      }
+    },
+    "NewX: Filter Grok modules": {
+      "zh-rCN": {
+        "name": "NewX: 过滤 Grok AI 模块",
+        "description": "隐藏时间线与帖子中的 Grok 摘要及 AI 推荐模块。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 過滤 Grok AI 模組",
+        "description": "隱藏動態時報與貼文中的 Grok 摘要及 AI 推薦模組。"
+      }
+    },
+    "NewX: Hide promoted posts": {
+      "zh-rCN": {
+        "name": "NewX: 隐藏推广帖子",
+        "description": "过滤时间线中的广告与赞助推广帖子。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 隱藏推廣貼文",
+        "description": "過滤動態時報中的廣告與贊助推廣貼文。"
+      }
+    },
+    "NewX: Hide Topics to follow": {
+      "zh-rCN": {
+        "name": "NewX: 隐藏推荐话题",
+        "description": "从时间线中移除“推荐关注的话题”卡片。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 隱藏推薦話題",
+        "description": "從動態時報中移除「推薦跟隨的話題」卡片。"
+      }
+    },
+    "NewX: Hide Creators to follow": {
+      "zh-rCN": {
+        "name": "NewX: 隐藏推荐创作者",
+        "description": "从时间线中移除“推荐关注的创作者”卡片。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 隱藏推薦創作者",
+        "description": "從動態時報中移除「推薦跟隨的創作者」卡片。"
+      }
+    },
+    "NewX: Disable timeline refresh": {
+      "zh-rCN": {
+        "name": "NewX: 禁用时间线自动刷新",
+        "description": "防止应用启动或切回前台时时间线自动刷新跳转。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 停用動態時報自動刷新",
+        "description": "防止應用程式啟動或切回前台時動態時報自動刷新跳轉。"
+      }
+    },
+    "NewX: Restore timeline position": {
+      "zh-rCN": {
+        "name": "NewX: 恢复时间线位置",
+        "description": "切回应用时保持并恢复上次浏览的时间线滚动位置。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 恢復動態時報位置",
+        "description": "切回應用程式時保持並恢復上次瀏覽的動態時報滚動位置。"
+      }
+    },
+    "NewX: Show following first": {
+      "zh-rCN": {
+        "name": "NewX: 默认显示正在关注",
+        "description": "启动应用时自动切换到“正在关注”时间线。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 預設顯示跟隨中",
+        "description": "啟動應用程式時自動切換到「跟隨中」動態時報。"
+      }
+    },
+    "NewX: Theme": {
+      "zh-rCN": {
+        "name": "NewX: 主题与动态取色",
+        "description": "支持 Material You 动态取色、高对比度与经典 Dim 暗色主题。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 主題與動態取色",
+        "description": "支持 Material You 動態取色、高對比度與經典 Dim 暗色主題。"
+      }
+    },
+    "NewX: Dynamic color": {
+      "zh-rCN": {
+        "name": "NewX: 动态主题色",
+        "description": "使应用界面与图标支持 Android Material You 动态配色。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 動態主題色",
+        "description": "使應用程式界面與圖標支持 Android Material You 動態配色。"
+      }
+    },
+    "NewX: Custom emoji font": {
+      "zh-rCN": {
+        "name": "NewX: 自定义 Emoji 字体",
+        "description": "允许导入并使用自定义 Emoji 表情字体文件。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 自訂 Emoji 字型",
+        "description": "允許導入並使用自訂 Emoji 表情字型文件。"
+      }
+    },
+    "NewX: Backup and restore": {
+      "zh-rCN": {
+        "name": "NewX: 设置备份与恢复",
+        "description": "支持导出与导入 Piko NewX 的全部设置配置。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 設定備份與恢復",
+        "description": "支持導出與導入 Piko NewX 的全部設定配置。"
+      }
+    },
+    "NewX: Block update screen": {
+      "zh-rCN": {
+        "name": "NewX: 屏蔽强制更新弹窗",
+        "description": "屏蔽启动时弹出的“当前版本已过时”强制更新提示。"
+      },
+      "zh-rTW": {
+        "name": "NewX: 屏蔽強製更新彈窗",
+        "description": "屏蔽啟動時彈出的「當前版本已過時」強製更新提示。"
+      }
     }
   },
   "options": {
@@ -250,6 +550,46 @@
       "zh-rTW": {
         "title": "應用程式名稱",
         "description": "為修補後的應用程式指定新的顯示名稱；輸入「X」則略過修改名稱。"
+      }
+    },
+    "Version code": {
+      "zh-rCN": {
+        "title": "版本号（Version Code）",
+        "description": "指定自定义内部版本号，用于屏蔽商店更新或降级覆盖安装。"
+      },
+      "zh-rTW": {
+        "title": "版本號（Version Code）",
+        "description": "指定自訂內部版本號，用於屏蔽商店更新或降級覆蓋安裝。"
+      }
+    },
+    "Custom sharing domain": {
+      "zh-rCN": {
+        "title": "自定义分享域名",
+        "description": "设置分享帖子时替换 x.com 的目标域名。"
+      },
+      "zh-rTW": {
+        "title": "自訂分享域名",
+        "description": "設定分享貼文時替換 x.com 的目標域名。"
+      }
+    },
+    "Restore Twitter icon": {
+      "zh-rCN": {
+        "title": "恢复经典 Twitter 蓝鸟图标",
+        "description": "将应用桌面启动图标替换为经典的蓝鸟图标。"
+      },
+      "zh-rTW": {
+        "title": "恢復經典 Twitter 藍鳥圖標",
+        "description": "將應用程式桌面啟動圖標替換為經典的藍鳥圖標。"
+      }
+    },
+    "Restore Twitter name": {
+      "zh-rCN": {
+        "title": "恢复应用名称为 Twitter",
+        "description": "将应用在桌面上显示的名称修改为 Twitter。"
+      },
+      "zh-rTW": {
+        "title": "恢復應用程式名稱為 Twitter",
+        "description": "將應用程式在桌面上顯示的名稱修改為 Twitter。"
       }
     }
   }
