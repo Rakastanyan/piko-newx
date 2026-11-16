@@ -1,3 +1,12 @@
+## [3.75.2](https://github.com/Rakastanyan/piko-newx/compare/v3.75.1...v3.75.2) (2026-11-16)
+
+## What's Changed
+
+* 修复禁用plays商店更新 (1780a6f) by @Rakastanyan
+* chore: update release metadata for v3.75.1 [skip ci] (8614e91) by @github-actions[bot]
+
+**Full Changelog**: https://github.com/Rakastanyan/piko-newx/compare/v3.75.1...v3.75.2
+
 ## [3.75.1](https://github.com/Rakastanyan/piko-newx/compare/v3.75.0...v3.75.1) (2026-11-15)
 
 ## What's Changed
