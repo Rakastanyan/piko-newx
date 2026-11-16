@@ -1,3 +1,12 @@
+## [3.75.7](https://github.com/Rakastanyan/piko-newx/compare/v3.75.6...v3.75.7) (2026-11-16)
+
+## What's Changed
+
+* 移除部分不可用的汉化，优化代码 (2d59c7a) by @Rakastanyan
+* chore: update release metadata for v3.75.6 [skip ci] (ee9d1e5) by @github-actions[bot]
+
+**Full Changelog**: https://github.com/Rakastanyan/piko-newx/compare/v3.75.6...v3.75.7
+
 ## [3.75.6](https://github.com/Rakastanyan/piko-newx/compare/v3.75.5...v3.75.6) (2026-11-16)
 
 ## What's Changed
