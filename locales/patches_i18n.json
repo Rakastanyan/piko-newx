@@ -239,6 +239,7 @@
         "name": "NewX: 恢復 Twitter 經典藍鳥圖示與品牌",
         "description": "將應用程式桌面圖示、啟動畫面與品牌名稱從 X 恢復為經典的 Twitter 藍鳥樣式。"
       }
+<<<<<<< HEAD
     },
     "Disable Play Store updates": {
       "zh-rCN": {
@@ -529,6 +530,8 @@
         "name": "NewX: 屏蔽強製更新彈窗",
         "description": "屏蔽啟動時彈出的「當前版本已過時」強製更新提示。"
       }
+=======
+>>>>>>> f0bfc84bb3c7e57bf4b316909a95b553086d3d2b
     }
   },
   "options": {
