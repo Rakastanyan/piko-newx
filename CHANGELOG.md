@@ -1,3 +1,20 @@
+## [3.75.3](https://github.com/Rakastanyan/piko-newx/compare/v3.75.2...v3.75.3) (2026-11-16)
+
+## What's Changed
+
+* 修复bug (eb4889b) by @Rakastanyan
+* 修复缺少的汉化 (f6904a6) by @Rakastanyan
+* chore: update release metadata for v3.75.2 [skip ci] (f0bfc84) by @github-actions[bot]
+
+**Full Changelog**: https://github.com/Rakastanyan/piko-newx/compare/v3.75.2...v3.75.3
+
+### New Patches
+* **Twitter:** NewX: 查看推文对象数据 / 查看貼文對象數據
+* **Twitter:** NewX: 自定义分享域名 / 自訂分享域名
+* **Twitter:** NewX: 永久分享链接 / 永久分享連結
+* **Twitter:** NewX: 主题与动态取色 / 主題與動態取色
+* **Twitter:** NewX: 恢复时间线位置 / 恢復動態時報位置
+
 ## [3.75.2](https://github.com/Rakastanyan/piko-newx/compare/v3.75.1...v3.75.2) (2026-11-16)
 
 ## What's Changed
