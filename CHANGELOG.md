@@ -1,3 +1,39 @@
+## [3.75.6](https://github.com/Rakastanyan/piko-newx/compare/v3.75.5...v3.75.6) (2026-11-16)
+
+## What's Changed
+
+* fix (3c1b340) by @Rakastanyan
+* chore: update release metadata for v3.75.5 [skip ci] (61b64ca) by @github-actions[bot]
+
+**Full Changelog**: https://github.com/Rakastanyan/piko-newx/compare/v3.75.5...v3.75.6
+
+## [3.75.5](https://github.com/Rakastanyan/piko-newx/compare/v3.75.4...v3.75.5) (2026-11-16)
+
+## What's Changed
+
+* fix (a08125a) by @Rakastanyan
+* 修复bug (da06b14) by @Rakastanyan
+* 修复bug (17ffdce) by @Rakastanyan
+* Merge branch 'main' of https://github.com/Rakastanyan/piko-newx (f79a033) by @Rakastanyan
+* chore: update release metadata for v3.75.4 [skip ci] (13fa793) by @github-actions[bot]
+
+**Full Changelog**: https://github.com/Rakastanyan/piko-newx/compare/v3.75.4...v3.75.5
+
+### New Patches
+* **Twitter:** NewX: 禁用模糊效果 effects / 停用模糊效果 effects
+* **Twitter:** NewX: 移除分享追踪参数 parameters / 移除分享追蹤參數 parameters
+* **Twitter:** NewX: 启用 quality-of-life feature flags / 啟用 quality-of-life feature flags
+* **Twitter:** NewX: 自定义 media menu 项目 / 自訂 media menu 項目
+* **Twitter:** NewX: 自定义底部导航栏 / 自訂底部導覽列
+* **Twitter:** NewX: 隐藏帖子回复 bar / 隱藏貼文回復 bar
+* **Twitter:** NewX: 自定义帖子 menu 项目 / 自訂貼文 menu 項目
+* **Twitter:** NewX: 自定义个人主页标签页 / 自訂個人資料頁分頁
+* **Twitter:** NewX: 禁用视频播放器 scrolling / 停用影片播放器 scrolling
+* **Twitter:** NewX: 自定义时间线标签页 / 自訂動態時報分頁
+* **Twitter:** NewX: 隐藏时间线标签页 bar / 隱藏動態時報分頁 bar
+* **Twitter:** NewX: 恢复 pinned home 标签页 / 恢復 pinned home 分頁
+* **Twitter:** NewX: 隐藏帖子 by verified account type / 隱藏貼文 by verified account type
+
 ## [3.75.0](https://github.com/Rakastanyan/piko-newx/releases/tag/v3.75.0) (2026-11-14)
 
 ## What's Changed
