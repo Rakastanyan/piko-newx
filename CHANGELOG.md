@@ -1,3 +1,41 @@
+## [3.75.3](https://github.com/Rakastanyan/piko-newx/compare/v3.75.2...v3.75.3) (2026-11-16)
+
+## What's Changed
+
+* 修复bug (eb4889b) by @Rakastanyan
+* 修复缺少的汉化 (f6904a6) by @Rakastanyan
+* chore: update release metadata for v3.75.2 [skip ci] (f0bfc84) by @github-actions[bot]
+
+**Full Changelog**: https://github.com/Rakastanyan/piko-newx/compare/v3.75.2...v3.75.3
+
+### New Patches
+* **Twitter:** NewX: 查看推文对象数据 / 查看貼文對象數據
+* **Twitter:** NewX: 自定义分享域名 / 自訂分享域名
+* **Twitter:** NewX: 永久分享链接 / 永久分享連結
+* **Twitter:** NewX: 主题与动态取色 / 主題與動態取色
+* **Twitter:** NewX: 恢复时间线位置 / 恢復動態時報位置
+
+## [3.75.2](https://github.com/Rakastanyan/piko-newx/compare/v3.75.1...v3.75.2) (2026-11-16)
+
+## What's Changed
+
+* 修复禁用plays商店更新 (1780a6f) by @Rakastanyan
+* chore: update release metadata for v3.75.1 [skip ci] (8614e91) by @github-actions[bot]
+
+**Full Changelog**: https://github.com/Rakastanyan/piko-newx/compare/v3.75.1...v3.75.2
+
+## [3.75.1](https://github.com/Rakastanyan/piko-newx/compare/v3.75.0...v3.75.1) (2026-11-15)
+
+## What's Changed
+
+* fix (d6a2cc2) by @Rakastanyan
+* 回退 (3f985af) by @Rakastanyan
+* 回退操作 (373de5f) by @Rakastanyan
+* Update README.md (ae7370a) by @Rakastanyan
+* chore: update release metadata for v3.75.0 [skip ci] (06e5a34) by @github-actions[bot]
+
+**Full Changelog**: https://github.com/Rakastanyan/piko-newx/compare/v3.75.0...v3.75.1
+
 ## [3.75.0](https://github.com/Rakastanyan/piko-newx/releases/tag/v3.75.0) (2026-11-14)
 
 ## What's Changed
