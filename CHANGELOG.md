@@ -1,3 +1,36 @@
+## [3.75.4](https://github.com/Rakastanyan/piko-newx/compare/v3.75.3...v3.75.4) (2026-11-16)
+
+## What's Changed
+
+* 修复bug (3d6196b) by @Rakastanyan
+* chore: update release metadata for v3.75.3 [skip ci] (6f88d30) by @github-actions[bot]
+
+**Full Changelog**: https://github.com/Rakastanyan/piko-newx/compare/v3.75.3...v3.75.4
+
+### New Patches
+* **Twitter:** NewX: 直接打开真实网址 / 直接打開真實網址
+* **Twitter:** NewX: 自定义侧边抽屉栏 / 自訂側邊抽屜欄
+* **Twitter:** NewX: 特性开关覆盖 / 功能開關覆蓋
+* **Twitter:** NewX: 自定义帖子内联操作栏 / 自訂貼文內聯操作欄
+* **Twitter:** NewX: 帖子内联下载按钮 / 貼文內聯下載按鈕
+* **Twitter:** NewX: 自定义media menu 项目 / 自訂media menu 項目
+* **Twitter:** NewX: Set 默认媒体标签页 / Set 預設媒體分頁
+* **Twitter:** NewX: Gallery 个人主页照片标签页 / Gallery 個人資料頁照片分頁
+* **Twitter:** NewX: 隐藏帖子作者操作按钮 / 隱藏貼文作者操作按鈕
+* **Twitter:** NewX: 隐藏post 回复 bar / 隱藏post 回復 bar
+* **Twitter:** NewX: 自定义post menu 项目 / 自訂post menu 項目
+* **Twitter:** NewX: 自定义profile 标签页 / 自訂profile 分頁
+* **Twitter:** NewX: Set 默认回复排序 / Set 預設回復排序
+* **Twitter:** NewX: 自定义timeline 标签页 / 自訂timeline 分頁
+* **Twitter:** NewX: 禁用时间线自动刷新 / 停用動態時報自動刷新
+* **Twitter:** NewX: 按话题过滤“为你推荐” / 按話題過滤「為你推薦」
+* **Twitter:** NewX: 隐藏 AI 生成帖子 / 隱藏 AI 生成貼文
+* **Twitter:** NewX: 隐藏发帖悬浮按钮 / 隱藏发帖懸浮按鈕
+* **Twitter:** NewX: 隐藏“新帖子”悬浮提示条 / 隱藏「新貼文」懸浮提示膠囊
+* **Twitter:** NewX: 隐藏timeline 标签页 bar / 隱藏timeline 分頁 bar
+* **Twitter:** NewX: 恢复pinned home 标签页 / 恢復pinned home 分頁
+* **Twitter:** NewX: 按关键词过滤帖子 / 按關鍵詞過滤貼文
+
 ## [3.75.3](https://github.com/Rakastanyan/piko-newx/compare/v3.75.2...v3.75.3) (2026-11-16)
 
 ## What's Changed
