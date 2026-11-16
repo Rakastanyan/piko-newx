@@ -1,3 +1,12 @@
+## [3.75.6](https://github.com/Rakastanyan/piko-newx/compare/v3.75.5...v3.75.6) (2026-11-16)
+
+## What's Changed
+
+* fix (3c1b340) by @Rakastanyan
+* chore: update release metadata for v3.75.5 [skip ci] (61b64ca) by @github-actions[bot]
+
+**Full Changelog**: https://github.com/Rakastanyan/piko-newx/compare/v3.75.5...v3.75.6
+
 ## [3.75.5](https://github.com/Rakastanyan/piko-newx/compare/v3.75.4...v3.75.5) (2026-11-16)
 
 ## What's Changed
